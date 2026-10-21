@@ -1,0 +1,10 @@
+add recommended module set whatsover in the team comp website
+Put rec for arc, Awakening selection , awakening order
+
+Main DPS - Deal dmg and mostly onfield
+Hybrid - Deal dmg and also do utility
+Utility - ex. Buff, Debuff, Shield, Mitigation, Heal, Energy
+
+
+
+https://kagurahime.github.io/CalculatorApp/

@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+<main class="container">
+
+    <header class="page-header">
+        <h1>NEVERNESS TO EVERNESS</h1>
+
+    </header>
+
+    <!-- FOUR CHARACTER SLOTS -->
+    <section class="slots">
+        <div class="slot" data-slot="0">
+            <button class="slot-select" type="button"
+                aria-label="Choose a character for Slot 1">
+                <span class="slot-heading">
+                    <span>SLOT 01</span>
+                    <span class="slot-status">Empty</span>
+                </span>
+                <span class="character-art placeholder">
+                    <span class="plus">+</span>
+                    <span>Choose character</span>
+                </span>
+                <span class="slot-name">Select a character</span>
+            </button>
+        </div>
+
+        <div class="slot" data-slot="1">
+            <button class="slot-select" type="button"
+                aria-label="Choose a character for Slot 2">
+                <span class="slot-heading">
+                    <span>SLOT 02</span>
+                    <span class="slot-status">Empty</span>
+                </span>
+                <span class="character-art placeholder">
+                    <span class="plus">+</span>
+                    <span>Choose character</span>
+                </span>
+                <span class="slot-name">Select a character</span>
+            </button>
+            <button class="slot-clear" type="button" aria-label="Remove character from Slot 2" hidden>×</button>
+        </div>
+
+        <div class="slot" data-slot="2">
+            <button class="slot-select" type="button"
+                aria-label="Choose a character for Slot 3">
+                <span class="slot-heading">
+                    <span>SLOT 03</span>
+                    <span class="slot-status">Empty</span>
+                </span>
+                <span class="character-art placeholder">
+                    <span class="plus">+</span>
+                    <span>Choose character</span>
+                </span>
+                <span class="slot-name">Select a character</span>
+            </button>
+            <button class="slot-clear" type="button" aria-label="Remove character from Slot 3" hidden>×</button>
+        </div>
+
+        <div class="slot" data-slot="3">
+            <button class="slot-select" type="button"
+                aria-label="Choose a character for Slot 4">
+                <span class="slot-heading">
+                    <span>SLOT 04</span>
+                    <span class="slot-status">Empty</span>
+                </span>
+                <span class="character-art placeholder">
+                    <span class="plus">+</span>
+                    <span>Choose character</span>
+                </span>
+                <span class="slot-name">Select a character</span>
+            </button>
+            <button class="slot-clear" type="button" aria-label="Remove character from Slot 4" hidden>×</button>
+        </div>
+    </section>
+
+    <!-- SLOT 1 SYNERGY -->
+    <section class="synergy-section">
+        <div class="synergy-heading">
+            <div>
+                <p class="eyebrow">TEAM COMPATIBILITY</p>
+                <button class="suggestion-button" id="suggestion-button" type="button">
+                    Suggestion
+                </button>
+            </div>
+        </div>
+
+        <div class="synergy-categories">
+            <section class="synergy-category" aria-labelledby="synergy-dps-heading">
+                <h3 id="synergy-dps-heading">DPS</h3>
+                <div class="synergy-list" id="synergy-list-dps"></div>
+                <p class="synergy-category-empty" id="synergy-empty-dps" hidden>
+                    No compatible DPS characters.
+                </p>
+            </section>
+
+            <section class="synergy-category" aria-labelledby="synergy-hybrid-heading">
+                <h3 id="synergy-hybrid-heading">Hybrid</h3>
+                <div class="synergy-list" id="synergy-list-hybrid"></div>
+                <p class="synergy-category-empty" id="synergy-empty-hybrid" hidden>
+                    No compatible Hybrid characters.
+                </p>
+            </section>
+
+            <section class="synergy-category" aria-labelledby="synergy-utility-heading">
+                <h3 id="synergy-utility-heading">Utility</h3>
+                <div class="synergy-list" id="synergy-list-utility"></div>
+                <p class="synergy-category-empty" id="synergy-empty-utility" hidden>
+                    No compatible Utility characters.
+                </p>
+            </section>
+        </div>
+
+        <p class="synergy-empty" id="synergy-empty">
+            Your compatible characters will appear here.
+        </p>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="recommendations">
+        <div class="recommendation-grid">
+            <section class="recommendation-card" aria-labelledby="arc-recommendation-heading">
+                <div class="recommendation-card-header">
+                    <h3 id="arc-recommendation-heading">Arc</h3>
+                    <button class="comparison-button" type="button" data-comparison="arc">
+                        Compare %
+                    </button>
+                </div>
+                <div class="recommendation-fields arc-recommendation-fields">
+                    <figure class="recommendation-image-card">
+                        <figcaption>Signature Arc</figcaption>
+                        <img id="signature-arc-image" alt="" hidden>
+                    </figure>
+                    <figure class="recommendation-image-card">
+                        <figcaption>F2P Arc</figcaption>
+                        <img id="f2p-arc-image" alt="" hidden>
+                    </figure>
+                    <figure class="recommendation-image-card">
+                        <figcaption>More Info</figcaption>
+                        <img id="arc-more-info-image" alt="" hidden>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="recommendation-card" aria-labelledby="console-recommendation-heading">
+                <div class="recommendation-card-header">
+                    <h3 id="console-recommendation-heading">Console</h3>
+                    <button class="comparison-button" type="button" data-comparison="console">
+                        Compare %
+                    </button>
+                </div>
+                <div class="recommendation-fields arc-recommendation-fields">
+                    <figure class="recommendation-image-card">
+                        <figcaption>Best Console</figcaption>
+                        <img id="console-best-image" alt="" hidden>
+                    </figure>
+                    <figure class="recommendation-image-card">
+                        <figcaption>Best Cartridge</figcaption>
+                        <img id="console-cartridge-image" alt="" hidden>
+                    </figure>
+                    <figure class="recommendation-image-card">
+                        <figcaption>More Info</figcaption>
+                        <img id="console-more-info-image" alt="" hidden>
+                    </figure>
+                </div>
+            </section>
+        </div>
+        <p class="recommendation-empty" id="recommendation-empty">
+            Select a Slot 1 character to see recommendation images.
+        </p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer-content">
+        <p class="site-footer-copyright">
+            © 2025-2026 NTEGame.com. All rights reserved.
+        </p>
+        <p class="site-footer-disclaimer">
+            NTEGame.com is not affiliated with or endorsed by Perfect World Games.
+            NTEGame.com is a Database and Tier List website for Neverness to Everness.
+        </p>
+        <nav class="site-footer-links" aria-label="Footer">
+            <a href="about.html" target="_blank" rel="noopener">About Us</a>
+            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="terms.html" target="_blank" rel="noopener">Terms</a>
+            <a href="contact.html" target="_blank" rel="noopener">Contact Us</a>
+        </nav>
+    </div>
+</footer>
+
+<!-- CHARACTER SELECTION POPUP -->
+<div class="modal" id="character-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Character collection"
+    >
+        <header class="modal-header">
+            <div>
+                <p class="eyebrow">CHARACTER COLLECTION</p>
+                <p id="modal-hint">Choose a character for Slot 1.</p>
+            </div>
+
+            <button
+                class="close-button"
+                id="close-modal"
+                type="button"
+                aria-label="Close popup"
+            >×</button>
+        </header>
+
+        <input
+            type="search"
+            id="character-search"
+            placeholder="Search character..."
+            autocomplete="off"
+        >
+
+        <div class="filter-section">
+            <p>Filter by group</p>
+
+            <div class="filter-buttons">
+                <button class="filter-button active"
+                    data-group="All" type="button">All</button>
+
+                <button class="filter-button"
+                    data-group="Cosmos" type="button">Cosmos</button>
+
+                <button class="filter-button"
+                    data-group="Chaos" type="button">Chaos</button>
+
+                <button class="filter-button"
+                    data-group="Anima" type="button">Anima</button>
+
+                <button class="filter-button"
+                    data-group="Incantation" type="button">Incantation</button>
+
+                <button class="filter-button"
+                    data-group="Lakshana" type="button">Lakshana</button>
+
+                <button class="filter-button"
+                    data-group="Psyche" type="button">Psyche</button>
+                <button class="filter-button"
+                    data-group="Dps" type="button">Dps</button>
+                <button class="filter-button"
+                    data-group="Hybrid" type="button">Hybrid</button>
+               
+                <button class="filter-button"
+                    data-group="Utility" type="button">Utility</button>
+            </div>
+        </div>
+
+        <div class="character-grid" id="character-grid"></div>
+
+        <p class="empty-message" id="empty-message" hidden>
+            No characters found.
+        </p>
+    </section>
+</div>
+
+<!-- SYNERGY DETAIL POPUP -->
+<div class="modal synergy-modal" id="synergy-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-synergy></div>
+
+    <section
+        class="synergy-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="synergy-detail-name"
+    >
+        <header class="modal-header">
+            <div>
+                <p class="eyebrow">CHARACTER SYNERGY</p>
+                <h2 id="synergy-detail-name">Character Name</h2>
+                <p class="synergy-detail-subtitle" id="synergy-detail-group"></p>
+            </div>
+
+            <button
+                class="close-button"
+                id="close-synergy-modal"
+                type="button"
+                aria-label="Close synergy details"
+            >×</button>
+        </header>
+
+        <div class="synergy-detail-content">
+            <div class="synergy-detail-art" id="synergy-detail-art">
+                <span class="character-placeholder">✦</span>
+            </div>
+
+            <div class="synergy-detail-info">
+                <h3>Why They Synergize</h3>
+                <p id="synergy-detail-description"></p>
+            </div>
+        </div>
+
+        <p class="synergy-detail-note">
+            This is a preview only. It will not change your selected team.
+        </p>
+    </section>
+</div>
+
+<!-- RECOMMENDATION PERCENTAGE COMPARISON -->
+<div class="modal percentage-modal" id="percentage-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-percentage></div>
+
+    <section
+        class="modal-panel percentage-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="percentage-modal-title"
+    >
+        <header class="modal-header">
+            <div>
+                <p class="eyebrow">SAMPLE COMPARISON</p>
+                <h2 id="percentage-modal-title">Percentage Comparison</h2>
+                <p class="percentage-modal-note">
+                    Sample labels and percentages — replace with your data.
+                </p>
+            </div>
+
+            <button
+                class="close-button"
+                id="close-percentage-modal"
+                type="button"
+                aria-label="Close percentage comparison"
+            >×</button>
+        </header>
+
+        <div class="percentage-comparison-list" id="percentage-comparison-list"></div>
+    </section>
+</div>
+
+<!-- SAMPLE TEAM SUGGESTIONS -->
+<div class="modal suggestion-modal" id="suggestion-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-suggestion></div>
+
+    <section
+        class="modal-panel suggestion-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="suggestion-modal-title"
+    >
+        <header class="modal-header">
+            <div>
+                <p class="eyebrow">TEAM COMP SAMPLES</p>
+                <h2 id="suggestion-modal-title">Team Suggestions</h2>
+                <p class="percentage-modal-note">
+                    Team suggestions are based on the selected DPS's synergy data.
+                </p>
+            </div>
+
+            <button
+                class="close-button"
+                id="close-suggestion-modal"
+                type="button"
+                aria-label="Close team suggestions"
+            >×</button>
+        </header>
+
+        <p class="suggestion-empty" id="suggestion-empty" hidden>
+            Select a DPS in Slot 1 to view team suggestions.
+        </p>
+        <div class="suggestion-lineups" id="suggestion-lineups"></div>
+    </section>
+</div>
+
+</body>
+</html>

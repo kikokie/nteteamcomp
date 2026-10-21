@@ -1,0 +1,157 @@
+const synergyData = [
+    {
+        characterId: "Nanally",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Baicang works well with this DPS."
+    },
+    {
+        characterId: "Mint",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+ {
+        characterId: "Jiyuan",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Linko",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Iroi",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Adler",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Baicang",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Zankou",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Sakiri",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Exe",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Daffodill",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Lacrimosa",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Chiz",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Edgar",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Elyms",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Hotori",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Shinku",
+        synergyWith: ["Zero", "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Zero",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Chaos",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Akane",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Hathor",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Skia",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Aurelia",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Fadia",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Haniel",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
+{
+        characterId: "Blackbird",
+        synergyWith: [ "Sakiri"],
+        description:
+            "Replace this text with your explanation of why Adler works well with this DPS."
+    },
